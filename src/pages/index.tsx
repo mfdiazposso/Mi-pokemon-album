@@ -85,7 +85,8 @@ export default function Home() {
               <div className="text-6xl mb-4">🔍</div>
               <p className="text-xl">¡Busca tu primer Pokémon!</p>
               <p className="text-sm mt-2">
-                Prueba con "pikachu", "charizard" o cualquier otro nombre
+                Prueba con <strong>pikachu</strong>, <strong>charizard</strong>{" "}
+                o cualquier otro nombre
               </p>
             </div>
           )}
