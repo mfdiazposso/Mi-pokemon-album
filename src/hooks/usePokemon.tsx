@@ -18,6 +18,7 @@ export const usePokemon = () => {
         const list = await fetchPokemonList();
         setpokemonList(list);
       } catch (err) {
+        console.error("Failed to load Pokémon:", err);
         setError("Oops! No pudimos cargar los pokémon");
       } finally {
         setLoading(false);
@@ -33,7 +34,7 @@ export const usePokemon = () => {
       setError(null);
       const pokemon = await fetchPokemonByName(name.toLowerCase());
       setCurrentPokemon(pokemon);
-    } catch (err) {
+    } catch {
       setError("No encontramos ese Pokémon");
       setCurrentPokemon(null);
     } finally {
